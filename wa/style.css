@@ -1,0 +1,64 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles specific to the setup of the card container */
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #FF5733;
+    border: 2px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px auto; /* Center the card horizontally */
+}
+
+/* Styles specific to the header and footer */
+.card header,
+.card footer {
+    height: 3em;
+    padding: 1em;
+    background: linear-gradient(to bottom, #444, #FF5733);
+    border-radius: 15px 15px 0 0;
+}
+
+/* Float the image to the right with max-height */
+.card img {
+    float: right;
+    max-height: 100%;
+}
+
+/* Fix errors in provided rulesets */
+/* Error 1: Fix the selector for <h2> and <p> elements */
+.card h2,
+.card p {
+    margin: 0;
+}
+
+/* Error 2: Add styles for the <article> element */
+.card article {
+    height: 15em; /* 120px in ems */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding-left: 1em; /* Adjust as needed */
+    color: #FFF; /* Light text color */
+}
+
+/* Give <h2> in the header appropriate font size and line height */
+.card header h2 {
+    font-size: 1.33em; /* 20px in ems */
+    line-height: 30px; /* Center in a 30px tall box */
+}
+
+/* Give <p> in the footer appropriate font size and line height */
+.card footer p {
+    font-size: 0.9375em; /* 15px in ems */
+    line-height: 30px; /* Center in a 30px tall box */
+}
+
+/* Align paragraph inside <article> with header and footer */
+.card article p {
+    padding-left: 1em; /* Adjust as needed */
+}
