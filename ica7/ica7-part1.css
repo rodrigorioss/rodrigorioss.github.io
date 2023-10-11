@@ -6,7 +6,7 @@ body {
     border-style: solid;
     width: 40vw;
     height: 33vh;
-    border-color: rgba(20, 250, 173, 1); /* Changed the alpha value to 1 */
+    border-color: rgba(20, 250, 173, 1); /* change 10 to 1 */
     border-width: 3px;
     border-radius: 10px;
     background-color: mediumseagreen;
@@ -14,9 +14,9 @@ body {
 }
 
 #text1 {
-    position: absolute; /* Change to absolute for positioning */
-    left: 150%; /* This will position the text outside the box */
-    top: 0; /* Adjust the top value as needed */
+    position: absolute; /* change to absolute for positioning */
+    left: 150%; 
+    top: 0; /* top value as needed */
 }
 
 #box2 {
@@ -26,9 +26,9 @@ body {
     border-radius: 3px;
     border-color: purple;
     background-color: mediumvioletred;
-    position: relative;
-    left: 0; /* Remove left property to position it to the left */
-    bottom: 0; /* Add bottom: 0 to position it at the bottom */
+    position: fixed;
+    left: 0; 
+    bottom: 0; 
 }
 
 #text2 {
