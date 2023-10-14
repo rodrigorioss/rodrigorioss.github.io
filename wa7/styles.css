@@ -1,5 +1,3 @@
-/* Default styles (for screens larger than 500px) */
-
 body {
   background-color: #fff;
   color: #333;
@@ -23,29 +21,29 @@ img {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 980px;
-  display: grid; /* Added for Task 4 */
-  grid-template-columns: 1fr 1fr; /* Added for Task 4 */
-  grid-gap: 20px; /* Added for Task 4 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; 
 }
 
 nav {
   background-color: #000;
   padding: .5em;
-  position: sticky; /* Added for Task 2 */
-  top: 0; /* Added for Task 2 */
-  z-index: 1; /* Added for Task 2 */
+  position: sticky; 
+  top: 0; 
+  z-index: 1; 
 }
 
 nav ul {
-  display: flex; /* Added for Task 1 */
-  justify-content: space-between; /* Added for Task 1 */
+  display: flex; 
+  justify-content: space-between; 
   padding: 0;
   list-style: none;
 }
 
 nav li {
-  flex: 1; /* Added for Task 1 */
-  text-align: center; /* Added for Task 1 */
+  flex: 1; 
+  text-align: center; 
 }
 
 nav a {
@@ -55,14 +53,14 @@ nav a {
 }
 
 .feature {
-  float: left; /* Added for Task 3 */
-  margin: 0 20px 20px 0; /* Added for Task 3 */
+  float: left; 
+  margin: 0 20px 20px 0; 
 }
 
 .photos {
-  display: grid; /* Added for Task 5 */
-  grid-template-columns: 1fr 1fr; /* Added for Task 5 */
-  grid-gap: 1px; /* Added for Task 5 */
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 1px; 
 }
 
 .photos li {
@@ -72,11 +70,11 @@ nav a {
 }
 
 article, aside {
-  padding: 20px; /* Added for Task 4 */
-  border: 1px solid #ccc; /* Added for Task 4 */
+  padding: 20px; 
+  border: 1px solid #ccc; 
 }
 
-/* Media Query for screens smaller than 500px */
+/* media query for screens smaller than 500px */
 
 @media screen and (max-width: 500px) {
   .grid {
