@@ -79,26 +79,26 @@ article, aside {
 @media screen and (max-width: 500px) {
   .grid {
     display: flex;
-    flex-direction: column; /* Change to vertical flexbox layout */
+    flex-direction: column; 
   }
 
   article, aside {
-    padding: 20px; /* You can adjust padding as needed for smaller screens */
-    border: 1px solid #ccc; /* You can adjust border as needed for smaller screens */
+    padding: 20px; 
+    border: 1px solid #ccc; 
   }
 
   .feature {
-    float: none; /* Remove the float for smaller screens */
-    margin: 0; /* Remove margin for smaller screens */
+    float: none; 
+    margin: 0; 
   }
 
   .photos {
-    display: flex; /* Change to a vertical flexbox for photos */
-    flex-wrap: wrap; /* Allow photos to wrap in smaller screens */
-    align-items: flex-start; /* Align photos to the start (left) */
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: flex-start; 
   }
 
   .photos li {
-    width: 50%; /* Make photos occupy half of the width for better layout on small screens */
+    width: 50%; 
   }
 }
