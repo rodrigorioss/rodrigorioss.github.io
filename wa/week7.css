@@ -1,36 +1,44 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: black; /* Change background color to black */
+    color: gold; /* Change text color to gold */
+    font-family: Arial, sans-serif; /* Change font */
 }
-nav{
+
+nav {
     height: 50vh;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height:20px;
-    background-color: blueviolet;
+    height: 20px;
+    background-color: black; /* Change nav bar background color to black */
 }
-nav a{
-    width:10vw;
+
+nav a {
+    width: 10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color: gold; /* Change nav bar text color to gold */
 }
 
-
-img{
-    width:30vw;
+img {
+    width: 30vw;
     height: 30vh;
 }
 
-#red-ball{
-    background-color: crimson;
+#red-ball {
+    background-color: gold; /* Change ball color to gold */
     width: 20px;
-    height:20px;
+    height: 20px;
     border-radius: 50%;
     position: absolute;
-    left:5vw;
-    top:0;
+    left: 5vw;
+    top: 0;
+    transition: background-color 0.3s; /* Add a transition for background color */
+}
+
+#red-ball:hover {
+    background-color: black; /* Change ball color to black on hover */
 }
