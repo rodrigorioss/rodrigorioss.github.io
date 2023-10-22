@@ -2,9 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black; /* Change background color to black */
-    color: gold; /* Change text color to gold */
-    font-family: Arial, sans-serif; /* Change font */
+    background-color: black; 
+    color: gold; 
+    font-family: Arial, sans-serif; 
 }
 
 nav {
@@ -13,14 +13,14 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     height: 20px;
-    background-color: black; /* Change nav bar background color to black */
+    background-color: black;
 }
 
 nav a {
     width: 10vw;
     text-align: center;
     text-decoration: none;
-    color: gold; /* Change nav bar text color to gold */
+    color: gold; 
 }
 
 img {
@@ -29,16 +29,16 @@ img {
 }
 
 #red-ball {
-    background-color: gold; /* Change ball color to gold */
+    background-color: gold;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     position: absolute;
     left: 5vw;
     top: 0;
-    transition: background-color 0.3s; /* Add a transition for background color */
+    transition: background-color 0.3s; /* Transition for background color */
 }
 
 #red-ball:hover {
-    background-color: black; /* Change ball color to black on hover */
+    background-color: black; /* Change ball to black on hover */
 }
