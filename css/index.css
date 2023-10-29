@@ -1,0 +1,66 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+}
+
+header {
+    background-color: gold;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.event {
+    padding: 20px;
+}
+
+.event-info {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: gold;
+    color: black;
+    padding: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .event-info {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .event-info {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
