@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CU Boulder Football Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .header {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .main-content {
+            margin: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #00703C;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CU Boulder Football Interactive Page</h1>
+    </div>
+    <div class="main-content">
+        <p>Click the buttons to interact with CU Boulder Football:</p>
+        <button id="colorButton">Change Background Color</button>
+        <button id="textButton">Change Text</button>
+        <p id="content">Welcome to the CU Boulder Football Page!</p>
+    </div>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = '#F9A825'; // Change background color
+        });
+
+        document.getElementById('textButton').addEventListener('click', function() {
+            document.getElementById('content').innerText = "Go Buffs! CU Boulder Football Rocks!"; // Change text content
+        });
+    </script>
+</body>
+</html>
