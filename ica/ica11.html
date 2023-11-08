@@ -10,16 +10,16 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 242px; /* Updated width */
+      width: 242px;
       background: #eee;
     }
 
     .msgBox p {
       line-height: 1.5;
       padding: 10px 20px;
-      padding-left: 82px; /* Added padding-left */
-      background-position: 25px center; /* Added background-position */
-      background-repeat: no-repeat; /* Added background-repeat */
+      padding-left: 82px; 
+      background-position: 25px center; 
+      background-repeat: no-repeat;
       color: #333;
     }
 
@@ -38,7 +38,6 @@
   <button id="displayMessageButton">Display message box</button>
 
   <script>
-    // Function to display a message box
     function displayMessage(msgText, msgType) {
       const body = document.body;
       const panel = document.createElement("div");
@@ -68,10 +67,9 @@
       }
     }
 
-    // Select the button and store a reference to it
+  
     const btn = document.querySelector("#displayMessageButton");
     
-    // Add a click event listener to the button to call the displayMessage function
     btn.addEventListener("click", () => {
       displayMessage("Woo, this is a different message!", "chat");
     });
