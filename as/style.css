@@ -1,11 +1,15 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   text-align: center;
+  color: gold;
+  text-shadow: 1px 1px 2px black;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-color: white; /* Changed to white */
+  color: gold;
 }
 
 .full-img {
@@ -13,6 +17,7 @@ body {
   display: block;
   width: 640px;
   height: 480px;
+  border: 2px solid gold;
 }
 
 .overlay {
@@ -21,23 +26,18 @@ body {
   left: 0;
   width: 640px;
   height: 480px;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.6);
 }
 
 button {
   border: 0;
-  background: rgba(150,150,150,0.6);
+  background: gold;
+  color: black;
   text-shadow: 1px 1px 1px white;
-  border: 1px solid #999;
+  border: 1px solid black;
   position: absolute;
   cursor: pointer;
   top: 2px;
   left: 2px;
-}
-
-.thumb-bar img {
-  display: block;
-  width: 20%;
-  float: left;
-  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
