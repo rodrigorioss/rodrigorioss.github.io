@@ -1,37 +1,28 @@
-// Select the 'new quote' button and assign it to a variable
-const newQuoteButton = document.querySelector('#new-quote-button');
+const newQuoteButton = document.querySelector('#js-new-quote');
 
-// Write an event listener for the button
 newQuoteButton.addEventListener('click', getQuote);
 
-// Declare the getQuote function
 function getQuote() {
-    // API endpoint
+    console.log("Button clicked!"); // Check the button click
+
     const apiEndpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 
-    // Use fetch method to get a random quote
     fetch(apiEndpoint)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             console.log(data);
-            displayQuote(data);
+
+            displayQuote(data.question);
         })
         .catch(error => {
-            console.error('Fetch operation error: ', error);
-            alert('Error fetching quote: ' + error.message);
+            console.error("Error fetching quote: ", error);
+            alert("An error occurred while fetching the quote.");
         });
 }
 
-// Write the displayQuote function
-function displayQuote(quoteData) {
+function displayQuote(quote) {
     const quoteTextElement = document.getElementById('js-quote-text');
-    quoteTextElement.textContent = quoteData.quote;
+    quoteTextElement.textContent = quote;
 }
 
-// Ensure a quote is displayed on page load
 document.addEventListener('DOMContentLoaded', getQuote);
