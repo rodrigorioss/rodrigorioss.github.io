@@ -21,6 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitButton.addEventListener('click', function () {
         console.log('Submitting phone number: ' + phoneNumber);
-        // Add additional logic for submitting the phone number, if needed
     });
 });
