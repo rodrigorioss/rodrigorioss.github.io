@@ -10,8 +10,17 @@ body {
 
 #phone-input {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.digit-container {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.digit {
+    width: 100px; /* Adjust the width as needed */
 }
 
 #display-box {
@@ -23,15 +32,6 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-}
-
-.digit-container {
-    margin: 10px;
-}
-
-.digit {
-    width: 100px; /* Adjust the width as needed */
-    cursor: pointer;
 }
 
 #buttons {

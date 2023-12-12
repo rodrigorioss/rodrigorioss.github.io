@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     digitContainers.forEach(container => {
         container.addEventListener('click', function () {
-            const digit = this.querySelector('.digit').getAttribute('data-digit');
+            const digit = this.getAttribute('data-digit');
             phoneNumber += digit;
             displayBox.textContent = phoneNumber;
         });
