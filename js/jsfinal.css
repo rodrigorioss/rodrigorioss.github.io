@@ -1,0 +1,32 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#phone-input {
+    display: flex;
+}
+
+.digit-container {
+    margin: 10px;
+}
+
+.digit {
+    width: 50px; /* Adjust the width as needed */
+    cursor: pointer;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
