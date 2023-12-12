@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -9,6 +10,19 @@ body {
 
 #phone-input {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display-box {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 .digit-container {
