@@ -19,7 +19,7 @@ body {
     margin: 10px;
     cursor: pointer;
     position: relative;
-    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
+    animation: moveUpDown 0.7s infinite; /* Faster up and down movement */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -35,7 +35,7 @@ body {
     right: 0;
     bottom: 0;
     cursor: pointer;
-    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
+    animation: moveUpDown 0.7s infinite; /* Faster up and down movement */
 }
 
 .digit {
@@ -43,7 +43,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
+    animation: moveUpDown 0.7s infinite; /* Faster up and down movement */
 }
 
 #display-box {
