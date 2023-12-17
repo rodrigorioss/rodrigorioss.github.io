@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     digitContainers.forEach(container => {
         container.addEventListener('click', function () {
-            const digit = this.getAttribute('data-digit');
-            phoneNumber += digit;
-            displayBox.textContent = phoneNumber;
+            if (phoneNumber.length < 10) {
+                const digit = this.getAttribute('data-digit');
+                phoneNumber += digit;
+                displayBox.textContent = phoneNumber;
+            }
         });
     });
 
@@ -21,5 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitButton.addEventListener('click', function () {
         console.log('Submitting phone number: ' + phoneNumber);
+        
+        // Clear the phone number after submission
+        phoneNumber = '';
+        displayBox.textContent = '';
     });
 });

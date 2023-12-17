@@ -17,6 +17,7 @@ body {
 .digit-container {
     margin: 10px;
     cursor: pointer;
+    animation: moveUpDown 1s infinite; /* Add animation to digit-container */
 }
 
 .digit {
@@ -43,4 +44,17 @@ button {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* Add the following CSS for animation */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
