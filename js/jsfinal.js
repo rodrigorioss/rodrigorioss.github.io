@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 const digit = this.getAttribute('data-digit');
                 phoneNumber += digit;
                 displayBox.textContent = phoneNumber;
+
+                // Add rotation and reset animation classes
+                this.classList.add('rotate');
+                setTimeout(() => {
+                    this.classList.remove('rotate');
+                }, 1000);
             }
         });
     });
@@ -23,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitButton.addEventListener('click', function () {
         console.log('Submitting phone number: ' + phoneNumber);
-        
+
         // Clear the phone number after submission
         phoneNumber = '';
         displayBox.textContent = '';

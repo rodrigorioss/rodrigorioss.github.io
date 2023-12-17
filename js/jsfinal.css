@@ -17,11 +17,11 @@ body {
 .digit-container {
     margin: 10px;
     cursor: pointer;
-    animation: moveUpDown 1s infinite; /* Add animation to digit-container */
+    animation: moveRandom 1s infinite, rotate 1s infinite; /* Add random movement and rotation */
 }
 
 .digit {
-    width: 100px; 
+    width: 100px;
 }
 
 #display-box {
@@ -33,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    animation: shake 0.5s ease-in-out infinite; /* Add shaking animation */
 }
 
 #buttons {
@@ -46,15 +47,59 @@ button {
     cursor: pointer;
 }
 
-/* Add the following CSS for animation */
-@keyframes moveUpDown {
+/* Add the following CSS for random movement animation */
+@keyframes moveRandom {
     0% {
-        transform: translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(5px) translateY(5px);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateX(-5px) translateY(-5px);
+    }
+    75% {
+        transform: translateX(5px) translateY(5px);
     }
     100% {
-        transform: translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* Add the following CSS for rotating digits */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    75% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Add the following CSS for shaking display box */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
