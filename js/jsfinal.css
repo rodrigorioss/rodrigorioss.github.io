@@ -17,7 +17,18 @@ body {
 .digit-container {
     margin: 10px;
     cursor: pointer;
-    animation: moveRandom 1s infinite, rotate 1s infinite, moveUpDown 0.5s infinite; /* Add up and down movement */
+    position: relative;
+}
+
+.digit-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    animation: moveRandom 1s infinite, moveUpDown 0.2s infinite; /* Faster up and down movement */
 }
 
 .digit {
@@ -66,35 +77,16 @@ button {
     }
 }
 
-/* Add the following CSS for up and down movement animation */
+/* Add the following CSS for faster up and down movement animation */
 @keyframes moveUpDown {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-50px);
     }
     100% {
         transform: translateY(0);
-    }
-}
-
-/* Add the following CSS for rotating digits */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(-90deg);
-    }
-    75% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(0deg);
     }
 }
 
