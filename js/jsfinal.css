@@ -6,6 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #f8f8f8; /* Updated background color */
 }
 
 #phone-input {
@@ -19,6 +20,11 @@ body {
     cursor: pointer;
     position: relative;
     animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
+    transition: transform 0.3s ease-in-out;
+}
+
+.digit-container:hover {
+    transform: scale(1.1);
 }
 
 .digit-container::before {
@@ -34,19 +40,24 @@ body {
 
 .digit {
     width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
     animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
 }
 
 #display-box {
     width: 200px;
     height: 40px;
-    border: 1px solid #ccc;
+    border: 2px solid #3498db;
+    background-color: #fff;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     animation: shake 0.5s ease-in-out infinite; /* Add shaking animation */
+    border-radius: 4px;
 }
 
 #buttons {
@@ -58,6 +69,15 @@ button {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
 
 /* Add the following CSS for faster up and down movement animation */
@@ -66,32 +86,13 @@ button {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-100vh);
-    }
-}
-
-/* Add the following CSS for random movement animation */
-@keyframes moveRandom {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    25% {
-        transform: translateX(5px) translateY(5px);
-    }
-    50% {
-        transform: translateX(-5px) translateY(-5px);
-    }
-    75% {
-        transform: translateX(5px) translateY(5px);
-    }
-    100% {
-        transform: translateX(0) translateY(0);
+        transform: translateY(-15px);
     }
 }
 
 /* Add the following CSS for shaking display box */
 @keyframes shake {
-    0% {
+    0%, 100% {
         transform: translateX(0);
     }
     25% {
