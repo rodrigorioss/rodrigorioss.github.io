@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.getElementById('submit');
     const displayBox = document.getElementById('display-box');
     let phoneNumber = '';
+    let currentIndex = 0;
+
+    setInterval(() => {
+        currentIndex = getRandomIndex();
+        updateDisplay();
+    }, 1000);
 
     digitContainers.forEach(container => {
         container.addEventListener('click', function () {
@@ -11,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const digit = this.getAttribute('data-digit');
                 phoneNumber += digit;
                 displayBox.textContent = phoneNumber;
-
-                // Add rotation and reset animation classes
                 this.classList.add('rotate');
                 setTimeout(() => {
                     this.classList.remove('rotate');
@@ -25,13 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
         phoneNumber = '';
         displayBox.textContent = '';
         console.log('Phone number reset.');
+        updateDisplay();
     });
 
     submitButton.addEventListener('click', function () {
         console.log('Submitting phone number: ' + phoneNumber);
-
-        // Clear the phone number after submission
         phoneNumber = '';
         displayBox.textContent = '';
+        updateDisplay();
     });
+
+    function updateDisplay() {
+        digitContainers.forEach((container, index) => {
+            const digitImage = container.querySelector('.digit');
+            digitImage.style.display = index === currentIndex ? 'block' : 'none';
+        });
+    }
+
+    function getRandomIndex() {
+        return Math.floor(Math.random() * digitContainers.length);
+    }
 });
