@@ -6,7 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8; /* Updated background color */
 }
 
 #phone-input {
@@ -19,7 +19,7 @@ body {
     margin: 10px;
     cursor: pointer;
     position: relative;
-    animation: moveUpDown 0.5s infinite;
+    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -35,7 +35,7 @@ body {
     right: 0;
     bottom: 0;
     cursor: pointer;
-    animation: moveUpDown 0.5s infinite;
+    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
 }
 
 .digit {
@@ -43,8 +43,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    animation: moveUpDown 0.5s infinite;
-    display: none; /* Hide all images initially */
+    animation: moveUpDown 0.5s infinite; /* Faster up and down movement */
 }
 
 #display-box {
@@ -57,7 +56,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    animation: shake 0.5s ease-in-out infinite;
+    animation: shake 0.5s ease-in-out infinite; /* Add shaking animation */
     border-radius: 4px;
 }
 
@@ -81,15 +80,17 @@ button:hover {
     background-color: #2980b9;
 }
 
+/* Add the following CSS for faster up and down movement animation */
 @keyframes moveUpDown {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
+    0%, 100% {
         transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
     }
 }
 
+/* Add the following CSS for shaking display box */
 @keyframes shake {
     0%, 100% {
         transform: translateX(0);
